@@ -1,0 +1,144 @@
+/* JS ADD/REMOVE CLASSES */
+.hidden {
+  display: none;
+}
+
+.rezultat-hidden {
+  display: none;
+}
+
+.para-hidden {
+  display: none;
+}
+.hidden-alert {
+  display: none;
+}
+
+html {
+  background: url(/slike/backgroundimg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2.5px);
+}
+
+.forma {
+  width: 300px;
+  background-color: #e3dbd3eb;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 40px 80px;
+  margin: 30px 0;
+}
+h1 {
+  color: #936363;
+  font-family: "MonteCarlo", cursive;
+  font-size: 64px;
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+}
+
+.alert-txt {
+  font-size: 14px;
+  color: rgb(233, 22, 22);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.naslovi-labele {
+  font-size: 18px;
+  font-weight: 500;
+  color: #741b47;
+}
+
+.odaberi-cvece {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.btn-izracunaj,
+.btn-resetuj {
+  padding: 15px 30px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #741b47;
+  color: #e3dbd3eb;
+  border: #741b47;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+.btn-izracunaj:hover {
+  color: #fdfbf8;
+  background-color: #741b48ad;
+}
+
+.btn-resetuj {
+  color: #fff6ec;
+  background-color: #936363c5;
+}
+.btn-resetuj:hover {
+  background-color: #936363;
+}
+
+input[type="number"],
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 5px;
+  border: #936363;
+  border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
+}
+
+input[type="number"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 3px 0.5px #741b47;
+}
+
+.cena {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 570px) {
+  .forma {
+    width: 210px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

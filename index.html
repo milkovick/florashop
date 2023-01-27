@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Projekat Cvećara || Florashop</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="forma">
+        <h1>Florashop</h1>
+        <p id="hidden-alert-para" class="alert-txt hidden-alert">
+          Molimo odaberite željeni poklon!
+        </p>
+        <div>
+          <label for="cvet" class="naslovi-labele">Odaberite cveće:</label>
+          <div class="odaberi-cvece">
+            <label for="ruza">Ruže</label>
+            <input
+              type="number"
+              name="cvet"
+              id="ruza"
+              placeholder="Cena po cvetu je 150 dinara"
+              value=""
+              name="itemConsumption"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              min="1"
+            />
+          </div>
+          <div class="odaberi-cvece">
+            <label for="ljiljan">Ljiljani</label>
+            <input
+              type="number"
+              name="cvet"
+              id="ljiljan"
+              placeholder="Cena po cvetu je 120 dinara"
+              value=""
+              name="itemConsumption"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              min="1"
+            />
+          </div>
+          <div class="odaberi-cvece">
+            <label for="gerber">Gerberi</label>
+            <input
+              type="number"
+              name="cvet"
+              id="gerber"
+              placeholder="Cena po cvetu je 70 dinara"
+              value=""
+              name="itemConsumption"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              min="1"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="dodatno" class="naslovi-labele">Dodatni pokloni:</label>
+          <div>
+            <input
+              type="checkbox"
+              name="dodatno"
+              id="bombonjera"
+              value="bombonjera"
+            />
+            Bombonjera
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="dodatno"
+              id="cokolada"
+              value="cokolada"
+            />
+            Čokolada
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="dodatno"
+              id="sampanjac"
+              value="sampanjac"
+            />
+            Šampanjac
+          </div>
+        </div>
+
+        <div>
+          <label for="placanje" class="naslovi-labele">Način plaćanja:</label>
+          <div>
+            <input type="radio" name="placanje" id="kes" value="kes" checked />
+            Keš
+          </div>
+          <div>
+            <input type="radio" name="placanje" id="kartica" value="kartica" />
+            Kartica
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="btn-izracunaj">Izračunaj</button>
+          <button type="reset" class="btn-resetuj">Resetuj</button>
+        </div>
+
+        <div class="rezultat-hidden">
+          <p class="naslovi-labele">Vaša porudžbina:</p>
+          <div id="ruza-foto"></div>
+          <div id="ljiljan-foto"></div>
+          <div id="gerber-foto"></div>
+          <p class="bombonjera hidden">+ bombonjera</p>
+          <p class="cokolada hidden">+ čokolada</p>
+          <p class="sampanjac hidden">+ šampanjac</p>
+        </div>
+
+        <div class="rezultat-hidden">
+          <p class="para-hidden naslovi-labele">
+            Cena bez popusta:
+            <span id="uk-cena-bez-popusta"></span> dinara
+          </p>
+          <p class="para-hidden naslovi-labele cena">
+            Cena sa popustom:
+            <span id="uk-cena-popust"></span> dinara
+          </p>
+          <p class="para-hidden naslovi-labele cena">
+            Ukupna cena: <span id="uk-cena-kes"></span> dinara
+          </p>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
